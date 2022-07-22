@@ -12,7 +12,6 @@ class AboutMe extends React.Component {
     const about = localStorage.getItem('hero');
     const heroDate = localStorage.getItem('hero.date');
     const now = new Date().getTime();
-    console.log(now - heroDate)
     if (about && (heroDate-now) < 2678400000 ) { //31days in milisec
       
       this.setState({ hero: JSON.parse(about) });
